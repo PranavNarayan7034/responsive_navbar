@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: Montserrat;
+}
+body{
+    height: 100vh;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    padding: 0 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+.logo span{
+    color: blue;
+}
+.navlink{
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.navlink.active{
+    color: red;
+}
+.menu{
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: absolute;
+    left: 90%;
+}
+.close{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 90%;
+    display: none;
+}
+
+.resp_nav{
+    margin-bottom: 25px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+.resnavitems{
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-between;
+}
+.icon{
+    height:25px;
+    width: 25px;
+    margin: 0 20px;
+}
+
+@media screen and (max-width:820px){
+    .navitems{
+        display: none;
+    }
+    .menu{
+        display: inline;
+    }
+    .resp_nav.active{
+        display: flex;
+    }
+    .navbar.active .menu{
+        display: none;
+    }
+    .navbar.active .close{
+        display: inline;
+    }
+
+}
